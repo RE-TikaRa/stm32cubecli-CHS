@@ -1,0 +1,223 @@
+{
+  "passed": 43,
+  "failed": 0,
+  "preview": null,
+  "baseline": "C:/Users/Tika/.local/stm32cube/zh-backups/2026-11-05T10-01-20.809Z/1-cube-wrapper-cube.exe",
+  "results": [
+    {
+      "name": "cube --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle show --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle list --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle install --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle download --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle license --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle init --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle update --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle remove --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle autoremove --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle external --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle external add --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle external remove --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle external list --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle-admin --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle-admin publish --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "cube bundle-admin create-index --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack sync --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack install --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack remove --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack detect --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack remote --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack list --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack remote list --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack remote add --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack remote remove --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack list packs --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack list devices --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack list components --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack list boards --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "pack list parts --help",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "工程创建帮助",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "原生命令未知选项",
+      "passed": true,
+      "status": 2
+    },
+    {
+      "name": "原生命令缺参时显示帮助",
+      "passed": true,
+      "status": 2
+    },
+    {
+      "name": "Pack 缺少必填参数",
+      "passed": true,
+      "status": 1
+    },
+    {
+      "name": "Pack 未知选项与相似名称",
+      "passed": true,
+      "status": 1
+    },
+    {
+      "name": "工程创建缺少必填选项",
+      "passed": true,
+      "status": 1
+    },
+    {
+      "name": "工程创建工具链取值错误",
+      "passed": true,
+      "status": 1
+    },
+    {
+      "name": "JSON 内容一致：--json bundle list",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "JSON 内容一致：--json bundle show cube-wrapper",
+      "passed": true,
+      "status": 0
+    },
+    {
+      "name": "Node 子命令转发与退出状态",
+      "passed": true,
+      "status": 0
+    }
+  ]
+}

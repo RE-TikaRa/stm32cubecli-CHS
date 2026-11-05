@@ -1,0 +1,889 @@
+{
+  "native": [
+    [
+      "Autoremove the specified bundles from the local bundle registry or from the project",
+      "自动删除本地组件仓库或项目中未使用的指定组件"
+    ],
+    ["The list of bundle identifiers to autoremove", "需要自动删除的组件标识"],
+    ["A module with admin-level bundle commands", "组件管理命令"],
+    [
+      "Publishes the CubeBundle in the current working directory, or the specified list of existing .bundle files",
+      "发布当前工作目录中的 CubeBundle，或指定的 .bundle 文件"
+    ],
+    [
+      "Creates an index file and writes it to either BundleRepositoryIndex.json file in the current directory (default) or to the standard output",
+      "生成索引，默认保存至当前目录的 BundleRepositoryIndex.json，也可输出至标准输出"
+    ],
+    [
+      "The optional list of the .bundle files to publish",
+      "可选的待发布 .bundle 文件列表"
+    ],
+    [
+      "Print the generated index file to the standard output",
+      "将生成的索引写入标准输出"
+    ],
+    [
+      "Specifies the maximum depth of directories to look into",
+      "设置搜索目录的最大层数"
+    ],
+    ["Bundle: ", "组件 "],
+    ["Name: ", "名称"],
+    ["Version: ", "版本："],
+    ["Description: ", "说明："],
+    ["Authors:", "作者"],
+    ["Licenses:", "许可"],
+    ["Origin: ", "来源"],
+    ["SHA-256 hash: ", "SHA-256："],
+    ["Prints this help", "显示帮助"],
+    [
+      "Prints the license agreement for the 'cube' tool",
+      "显示 cube 的许可协议"
+    ],
+    [
+      "Print output as JSON (for certain flags only)",
+      "以 JSON 输出，适用于部分选项"
+    ],
+    [
+      "Run cube command in different working directory",
+      "在指定工作目录运行 cube 命令"
+    ],
+    ["Print the resolved COMMAND/RUNTIME", "显示解析的命令或运行时"],
+    ["Lists loaded bundles", "列出加载组件"],
+    [
+      "Show the merged paths to Cube tools that will be prepended to PATH",
+      "显示将添加到 PATH 开头的 Cube 工具路径"
+    ],
+    ["Prints Cube configuration values", "显示 Cube 配置"],
+    [
+      "Prints the used values for the CLI environment, e.g. path to bundles or packs, use settings keys",
+      "按配置项名称查询 CLI 环境配置，例如组件或支持包路径"
+    ],
+    ["Sets a Cube configuration value, e.g. '", "设置 Cube 配置项，例如 '"],
+    ["Removes a Cube configuration value", "删除 Cube 配置项"],
+    [
+      "Enables verbose output for the cube cli wrapper tool",
+      "启用 cube 命令入口的详细输出"
+    ],
+    [
+      "Disables the use of 'detach' by any command or flag",
+      "禁用所有命令和选项的分离运行"
+    ],
+    ["Detaches the launched command.", "分离运行启动的命令"],
+    [
+      "For supporting commands run a command without performing any changes",
+      "对支持此选项的命令进行预演，不执行修改"
+    ],
+    ["Prints the version", "显示版本"],
+    [
+      "Specify a specific version or version range for a bundle to be used for the COMMAND/RUNTIME",
+      "指定命令或运行时使用的组件版本或版本范围"
+    ],
+    ["Install/uninstall bundles", "安装或卸载组件"],
+    ["Admin tool for bundles", "组件管理工具"],
+    ["Flags: ", "选项 "],
+    ["Environment variables:", "环境变量："],
+    [
+      "COMMANDS: Run '[COMMAND] --help' to get more details\n",
+      "命令：运行 [COMMAND] --help 查看详细帮助\n"
+    ],
+    [
+      "-- Override local bundle repository location (",
+      "-- 指定本地组件仓库位置（"
+    ],
+    [
+      "-- Include extra bundles in addition to installed ones (is searched recursively) (",
+      "-- 添加额外组件目录，包含其子目录（"
+    ],
+    ["-- URL to the online cube bundle registry (", "-- 在线组件仓库地址（"],
+    ["-- Path to CMSIS Pack storage (", "-- CMSIS 支持包路径（"],
+    ["-- Path to cache storage (", "-- 缓存存储路径（"],
+    ["-- Path to log storage (", "-- 日志存储路径（"],
+    ["-- Max number of redirect to follow (", "-- 最大重定向次数（"],
+    ["-- Number of retry attempts (", "-- 重试次数（"],
+    ["-- Timeout for network accesses (", "-- 网络访问超时（"],
+    ["Not configured", "未配置"],
+    ["Shows the details of the installed bundle", "显示已安装组件的详情"],
+    ["Shows the license of bundle(s)", "显示组件许可协议"],
+    [
+      "Updates any installed local bundles to the latest version available online",
+      "将已安装的本地组件更新至在线最新版本"
+    ],
+    [
+      "Creates an empty CubeBundle.json template file in the current directory or initializes a bundle project",
+      "在当前目录创建 CubeBundle.json 模板或初始化组件项目"
+    ],
+    [
+      "Installs a number of bundles, can either be a BUNDLE_NAME, local file system path or TODO-URL",
+      "安装组件，可指定组件名、本地路径或 URL"
+    ],
+    [
+      "Downloads a number of bundles and their dependencies to the current folder, can either be a BUNDLE_NAME, local file system path or TODO-URL",
+      "下载组件及其依赖至当前目录，可指定组件名、本地路径或 URL"
+    ],
+    ["Manage external bundles", "管理外部组件"],
+    [
+      "Lists installed bundles (JSON mode available)",
+      "列出已安装组件，支持 JSON 输出"
+    ],
+    [
+      "Lists dependencies for the provided bundle identifiers",
+      "列出指定组件的依赖"
+    ],
+    [
+      "Lists usages for the provided bundle identifiers",
+      "列出指定组件的使用情况"
+    ],
+    [
+      "Lists available online bundles (JSON mode available)",
+      "列出在线可用组件，支持 JSON 输出"
+    ],
+    [
+      "Lists all available online bundles, even those that cannot be installed on this host (JSON mode available)",
+      "列出所有在线组件，包含其他平台的组件，支持 JSON 输出"
+    ],
+    [
+      "Specify tag list to filter available online bundles",
+      "按标签筛选在线可用组件"
+    ],
+    [
+      "Packages the current working directory into a CubeBundle",
+      "将当前工作目录打包为 CubeBundle"
+    ],
+    [
+      "Validates the CubeBundle.json in the current working directory",
+      "校验当前工作目录中的 CubeBundle.json"
+    ],
+    [
+      "Fixes missed dependencies for the installed bundles",
+      "安装已安装组件缺失的依赖"
+    ],
+    ["Prints the CubeBundle.json schema", "显示 CubeBundle.json 定义"],
+    [
+      "Removes the specified bundle(s) version(s) or all the versions for a given bundle name if '--all' flag is specified",
+      "删除指定版本的组件；指定 --all 时删除该组件的所有版本"
+    ],
+    [
+      "Removes all unused bundle(s) version(s) for the specified bundle(s) name(s) or for all the bundles",
+      "删除指定组件或所有组件中未使用的版本"
+    ],
+    ["Automatically answer yes to all questions", "自动确认所有询问"],
+    ["Consider all bundle versions", "包含组件的所有版本"],
+    ["Force installation/removal of bundles", "强制安装或删除组件"],
+    ["Installed bundles:", "已安装组件："],
+    ["Print help (see more with '--help')", "显示帮助，详见 --help"],
+    ["Print help (see a summary with '-h')", "显示帮助，概要见 -h"],
+    ["Print help for the subcommand(s)", "显示子命令帮助"],
+    [
+      "Print this message or the help of the given subcommand(s)",
+      "显示此帮助或指定子命令的帮助"
+    ],
+    ["Print help", "帮助"],
+    ["Print version", "显示版本"],
+    ["Usage:", "用法"],
+    ["Arguments", "参数"],
+    ["Options", "选项"],
+    ["Commands", "命令"],
+    ["Commands:", "命令："],
+    ["' or '", "'或'"],
+    ["possible values", "可选值"],
+    ["error:", "错误"],
+    ["tip:", "注:"],
+    ["unexpected argument '", "未知参数 '"],
+    ["' found", "'"],
+    ["unrecognized subcommand '", "未知子命令 '"],
+    ["a value is required for '", "选项需要参数值：'"],
+    ["' but none was supplied", "'，未提供"],
+    ["invalid value '", "无效值 '"],
+    ["' for '", "' 对 '"],
+    [
+      "the following required arguments were not provided:",
+      "未提供以下必填参数："
+    ],
+    ["' requires a subcommand but one was not provided", "' 需要指定子命令"],
+    ["For more information, try '", "详细帮助见 '"],
+    ["to pass '", "若将 '"],
+    ["' as a value, use '", "' 用作值，用 '"],
+    ["the argument '", "参数 '"],
+    ["the subcommand '", "子命令 '"],
+    ["' cannot be used with", "' 不能同时用于"],
+    ["' cannot be used multiple times", "' 不能重复指定"],
+    ["No such command '", "无此命令 '"],
+    ["Answered '", "已选 '"],
+    ["' automatically", "'（自动）"],
+    [
+      "No answer possible, stdin is not a terminal",
+      "标准输入未连接终端，无法回答"
+    ],
+    [" options are allowed", " 为可选回答"],
+    ["Only ", "仅 "],
+    ["Installation has been completed", "安装完成"],
+    ["Installed ", "已安装 "],
+    [" successfully, ", "，占用 "],
+    [" used", ""],
+    [
+      "Shows installed bundle details or bundle details from project context",
+      "显示已安装组件或项目所用组件的详情"
+    ],
+    [
+      "Shows installed bundle details or bundles in a project content",
+      "显示已安装组件或项目所用组件的详情"
+    ],
+    [
+      "Install bundles according to the list of ids/names and/or in a project scope",
+      "按名称或标识安装组件，也可为项目安装组件"
+    ],
+    [
+      "Downloads bundles according to the list of ids/names and/or in a project scope",
+      "按名称或标识下载组件，也可为项目下载组件"
+    ],
+    [
+      "Initializes a new CubeBundle or a Cube Bundle project in the current folder",
+      "在当前目录初始化 CubeBundle 或组件项目"
+    ],
+    [
+      "Update bundles in the registry or in the project",
+      "更新本地仓库或项目中的组件"
+    ],
+    [
+      "Remove the specified bundles from the local bundle registry or from the project",
+      "从本地组件仓库或项目中删除指定组件"
+    ],
+    [
+      "Show licenses for the specified bundle files or bundle identifiers",
+      "显示指定组件文件或组件的许可协议"
+    ],
+    [
+      "Manage external bundles. This is for keeping track of bundles that are installed outside of the CUBE_BUNDLE_PATH ",
+      "管理安装在 CUBE_BUNDLE_PATH 以外位置的外部组件"
+    ],
+    ["Add new locations of externally managed bundles", "添加外部组件所在目录"],
+    [
+      "Remove locations from externally managed bundles",
+      "移除外部组件所在目录"
+    ],
+    ["Lists all currently known external folders", "列出已登记的外部目录"],
+    [
+      "Paths to folders containing a CubeBundle.json",
+      "包含 CubeBundle.json 的目录路径"
+    ],
+    [
+      "The list of bundle names or identifiers to install",
+      "需要安装的组件名称或标识"
+    ],
+    [
+      "The list of bundle names or identifiers to download",
+      "需要下载的组件名称或标识"
+    ],
+    ["The list of bundle identifiers to remove", "需要删除的组件标识"],
+    [
+      "The list of bundle identifiers to update. If empty all the local bundles will be updated",
+      "需要更新的组件标识；留空时更新所有本地组件"
+    ],
+    ["Shows the details of the installed bundles", "显示已安装组件的详情"],
+    [
+      "Answers \"yes\" to any question asked during the installation/download/removal",
+      "自动以 yes 确认安装、下载或删除时的询问"
+    ],
+    [
+      "Answers \"no\" to any question asked during the installation/download/removal",
+      "自动以 no 拒绝安装、下载或删除时的询问"
+    ],
+    ["Shows the bundles locked to project context", "显示项目锁定的组件"],
+    [
+      "Shows the bundles installed for the current project",
+      "显示当前项目已安装的组件"
+    ],
+    ["Install bundles for a project", "为项目安装组件"],
+    ["Download bundles for a project", "为项目下载组件"],
+    [
+      "For the specified list of bundles to install, skip installing the dependencies of the bundles",
+      "安装指定组件时不安装其依赖"
+    ],
+    [
+      "If the flag is presented, the bundles are downloaded for all the platforms. Otherwise, only bundles for the current platform are downloaded",
+      "指定时下载所有平台的组件；否则仅下载当前平台的组件"
+    ],
+    [
+      "Initialize a new bundle project in the current folder, potentially with a list of bundles",
+      "在当前目录初始化组件项目，可同时指定组件列表"
+    ],
+    [
+      "Indicates that the update should be done in a scope of the project",
+      "更新当前项目使用的组件"
+    ],
+    [
+      "Indicates that the bundles should be removed from the project",
+      "从当前项目中删除组件"
+    ],
+    [
+      "Shows the details of the specified bundles from the online repository",
+      "显示在线仓库中指定组件的详情"
+    ],
+    [
+      "cube wrapper could not load project context: ",
+      "cube 无法加载项目环境："
+    ],
+    ["cube wrapper version: ", "cube 入口版本："],
+    ["cube wrapper running on: ", "cube 运行平台："],
+    ["cube wrapper installed at ", "cube 安装位置："],
+    [
+      "cube wrapper installed at: Unknown running location: ",
+      "cube 安装位置未知，运行路径："
+    ],
+    ["Cube wrapper launching latest: ", "cube 正在启动最新版："],
+    ["Failed to run latest Cube wrapper: ", "启动最新版 cube 失败："],
+    ["Failed to launch latest cube wrapper: ", "无法启动最新版 cube："],
+    [
+      "Failed to get current exe path for cube wrapper tool\n",
+      "无法获取 cube 程序路径\n"
+    ],
+    ["Failed to create registry path at ", "创建注册目录失败："],
+    ["Using bundle installed repository at ", "本地组件目录："],
+    ["Using extra bundle installed at ", "附加组件目录："],
+    ["Using metadata at ", "元数据目录："],
+    ["Using CMSIS_PACK_ROOT at ", "CMSIS_PACK_ROOT："],
+    ["Using CUBE_CACHE_PATH ", "CUBE_CACHE_PATH："],
+    ["Using CUBE_LOG_PATH ", "CUBE_LOG_PATH："],
+    ["Using CUBE_NETWORK_MAX_REDIRECT ", "CUBE_NETWORK_MAX_REDIRECT："],
+    ["Using CUBE_NETWORK_RETRY ", "CUBE_NETWORK_RETRY："],
+    ["Using CUBE_NETWORK_TIMEOUT ", "CUBE_NETWORK_TIMEOUT："],
+    ["Using CUBE_BUNDLE_REGISTRY ", "CUBE_BUNDLE_REGISTRY："],
+    ["With version: ", "版本："],
+    ["Failed to find CWD for bundle: ", "无法获取组件目录："],
+    ["The folder ", "目录 "],
+    [" already exists at ", " 已存在："],
+    ["Failed to fetch index: ", "获取索引失败："],
+    ["Failed to create bundle dir ", "创建组件目录失败："],
+    ["Error whilst trying to remove ", "删除失败："],
+    [
+      "Warning: error while writing to the repository event log: ",
+      "警告：写入仓库事件日志失败："
+    ],
+    ["Failed to read file to string: ", "读取文件失败："],
+    ["Failed to parse JSON: ", "解析 JSON 失败："],
+    ["Failed to find CWD\n", "无法获取目录\n"],
+    ["Failed to parse bundle: ", "解析组件失败："],
+    ["Unable to locate runtime '", "找不到运行时 '"],
+    ["', some dependencies where not found: ", "'，缺少以下依赖："],
+    ["Failed to write file: ", "写入文件失败："],
+    ["Failed to serialize json: ", "序列化 JSON 失败："],
+    [" already exists, leaving as is.\n", " 已存在，保留原文件。\n"],
+    ["Can't install bundles ", "无法安装组件 "],
+    [
+      ". The bundles' target platform doesn't match the current one",
+      "。组件的目标平台与当前平台不匹配"
+    ],
+    ["Installing local bundle file(s):\n\t", "正在安装本地组件：\n\t"],
+    ["Need to download the following bundles:", "需要下载以下组件："],
+    ["Nothing to download\n", "无需下载\n"],
+    ["Need to download:\n", "需要下载：\n"],
+    ["Proceed with download", "是否下载"],
+    ["To check the terms for ", "查看许可条款："],
+    [" run: \"cube bundle license ", "，用\"cube bundle license "],
+    [
+      "  No remote bundles supposed to be installed\n",
+      "  没有需要在线安装的组件\n"
+    ],
+    [
+      "Local bundle files requires additional online bundles:",
+      "本地组件还需要以下在线组件："
+    ],
+    [
+      "Warning, some required bundles could not be found, installation may be incomplete:",
+      "部分必需组件未找到，安装可能不完整："
+    ],
+    [
+      "Do you want to install the following bundles or show the license(s): ",
+      "是否安装以下组件，或查看许可协议："
+    ],
+    ["Required bundle could not be found: ", "找不到必需的组件："],
+    ["Failed to download ", "下载失败："],
+    ["Installing local file bundle ", "正在安装本地组件 "],
+    ["Failed to read bundle file: ", "读取组件文件失败："],
+    ["Invalid CubeBundle.json in bundle: ", "CubeBundle.json 无效："],
+    ["Failed to unpack bundle with error ", "解包组件失败："],
+    [
+      " is only partially installed. Use --force to overwrite.",
+      " 仅部分安装。可使用 --force 覆盖。"
+    ],
+    ["Do you want to remove the following bundles: ", "是否删除以下组件："],
+    [" is not installed", " 未安装"],
+    ["Everything is up to date.\n", "组件均为最新。\n"],
+    ["Failed to download index: ", "下载索引失败："],
+    [
+      "No updates online for update specification '",
+      "未找到符合条件的在线更新：'"
+    ],
+    ["Installed bundles:\n", "已安装组件：\n"],
+    ["Total download size is ", "总下载大小："],
+    [", total approximate install size is ", "，预计安装大小："],
+    ["Total download size is at least ", "总下载大小至少为 "],
+    [", total install size is at least ", "，安装大小至少为 "],
+    ["Failed to show bundle(s): ", "显示组件失败："],
+    ["Failed to show bundle(s) license(s): ", "显示组件许可协议失败："],
+    ["Failed to update bundle(s): ", "更新组件失败："],
+    ["Failed to initialize: ", "初始化失败："],
+    ["Failed to install bundle(s): ", "安装组件失败："],
+    ["Failed to download bundle(s): ", "下载组件失败："],
+    ["Failed to manage external bundle(s): ", "管理外部组件失败："],
+    ["Failed to list installed bundles: ", "列出已安装组件失败："],
+    ["Failed to get usage information: ", "获取使用信息失败："],
+    ["Failed to list available online bundles: ", "列出在线可用组件失败："],
+    ["Failed to list all online bundles: ", "列出所有在线组件失败："],
+    ["Failed to remove bundle(s): ", "删除组件失败："],
+    ["Failed to autoremove bundle(s): ", "自动删除组件失败："],
+    ["Do you want to overwrite ", "是否覆盖 "],
+    ["Used bundles:\n", "使用组件\n"],
+    ["Project bundles for the current platform:\n", "当前平台的项目组件：\n"],
+    ["Project bundles for other platforms:\n", "其他平台的项目组件：\n"],
+    ["Can't find a project in ", "找不到项目："],
+    ["Can't find bundle(s) with identifiers ", "找不到指定标识的组件："],
+    ["The following bundles can be autoremoved:\n", "以下组件可自动删除：\n"],
+    ["Nothing to remove, the bundles are in use", "组件正在使用，无需删除"],
+    [
+      "Can't resolve these bundle(s) specifications(s): ",
+      "无法解析以下组件条件："
+    ],
+    ["Warning, adding non-existing location ", "警告：添加的位置不存在："],
+    [" to externally managed bundles\n", " 至外部组件列表\n"],
+    ["\nDownloaded size: ", "\n下载大小："],
+    ["\nInstalled size: ", "\n安装大小："]
+  ],
+  "common": {
+    "literals": [
+      ["Usage:", "用法："],
+      ["Arguments:", "参数："],
+      ["Options:", "选项："],
+      ["Global Options:", "全局选项："],
+      ["Commands:", "命令："],
+      ["display help for command", "显示命令帮助"],
+      ["output the version number", "显示版本号"]
+    ],
+    "raw": [
+      ["`choices: ${", "`可选值：${"],
+      ["`default: ${", "`默认值：${"],
+      ["`preset: ${", "`预设值：${"],
+      ["`env: ${", "`环境变量：${"],
+      [
+        "`Allowed choices are ${this.argChoices.join(\", \")}.`",
+        "`可选值为：${this.argChoices.join(\", \")}。`"
+      ],
+      ["`error: missing required argument '", "`错误：缺少必填参数 '"],
+      ["`error: required option '", "`错误：未指定必填选项 '"],
+      ["}' not specified`", "}'`"],
+      ["`error: unknown option '", "`错误：未知选项 '"],
+      ["`error: unknown command '", "`错误：未知命令 '"],
+      ["}' argument missing`", "}' 缺少参数值`"],
+      ["`error: option '", "`错误：选项 '"],
+      ["`error: command-argument value '", "`错误：命令参数值 '"],
+      ["}' argument '", "}' 的参数值 '"],
+      ["}' is invalid.`", "}' 无效。`"],
+      ["}' value '", "}' 的值 '"],
+      ["}' from env '", "}' 来自环境变量 '"],
+      ["}' is invalid for argument '", "}' 不适用于参数 '"],
+      ["(Did you mean one of ${", "（可用的相似名称：${"],
+      ["(Did you mean ${", "（相似名称：${"],
+      ["}?)`", "}）`"]
+    ]
+  },
+  "pack": {
+    "literals": [
+      [
+        "Downloads all available .PDSC metadata into $CMSIS_PACK_ROOT/.Download/cache",
+        "下载可用的 .PDSC 元数据至 $CMSIS_PACK_ROOT/.Download/cache"
+      ],
+      [
+        "Use specific <path> instead of env CMSIS_PACK_ROOT",
+        "使用指定路径，替代环境变量 CMSIS_PACK_ROOT"
+      ],
+      ["Only sync using installed snapshot", "仅使用已安装的快照同步"],
+      ["Don't use snapshot while syncing", "同步时不使用快照"],
+      [
+        "Either an URL to a .pack or an identifier such as \"ARM.CMSIS.5.8.0\"",
+        ".pack 文件的 URL，或 ARM.CMSIS.5.8.0 形式的标识"
+      ],
+      [
+        "Install one or multiple packs using either URL or VENDOR.NAME.VERSION identifier",
+        "通过 URL 或 VENDOR.NAME.VERSION 标识安装支持包"
+      ],
+      [
+        "Use specific <path> to install the pack to this local destination. If multiple packs are installed, the identifier will be a subfolder of the destination.",
+        "安装至指定本地路径；安装多个支持包时，按标识分别创建子目录"
+      ],
+      [
+        "Force installation of pack even if installed",
+        "强制安装，即使支持包已安装"
+      ],
+      [
+        "An identifier such as \"ARM.CMSIS.5.8.0\"",
+        "ARM.CMSIS.5.8.0 形式的支持包标识"
+      ],
+      [
+        "Remove one or multiple packs using the format \"VENDOR.NAME.VERSION\"",
+        "按 VENDOR.NAME.VERSION 标识删除支持包"
+      ],
+      [
+        "The installed pack will not be removed, only remove the downloaded metadata .pdsc file from $CMSIS_PACK_ROOT",
+        "仅删除 $CMSIS_PACK_ROOT 中的 .pdsc 元数据，保留已安装的支持包"
+      ],
+      [
+        "The installed pack will not be removed, only remove the downloaded cached .pack file from $CMSIS_PACK_ROOT",
+        "仅删除 $CMSIS_PACK_ROOT 中缓存的 .pack 文件，保留已安装的支持包"
+      ],
+      [
+        "Path that will be recursively searched for .PDSCs files",
+        "搜索 .PDSC 文件的目录，包含子目录"
+      ],
+      [
+        "Search and add local references to found .PDSCs",
+        "搜索 .PDSC 文件并添加本地引用"
+      ],
+      [
+        "Manage remote indexes to use for finding and downloading packs and pack information",
+        "管理用于查找、下载支持包及其信息的远程索引"
+      ],
+      ["List remote indexes currently in use", "列出当前使用的远程索引"],
+      ["Add a remote index to the pack root", "添加远程索引"],
+      [
+        "Clear any potentially existing configuration before adding the new index URL",
+        "添加新索引 URL 前清除现有配置"
+      ],
+      ["The new url to add", "需要添加的 URL"],
+      ["Remove a remote index to the pack root", "移除远程索引"],
+      [
+        "Resets the index configuration to use default urls.",
+        "恢复默认索引 URL"
+      ],
+      [
+        "The index or Url of the remote to remove. use \"remote list\" to see indexes",
+        "需要移除的索引编号或 URL，可通过 remote list 查看编号"
+      ],
+      ["List of available elements", "列出可用资源"],
+      ["List of available packs", "列出可用支持包"],
+      ["List of available devices", "列出可用芯片"],
+      ["List of available components", "列出可用组件"],
+      ["List of available boards", "列出可用开发板"],
+      ["List of available parts", "列出可用部件"],
+      ["Print full names of devices", "显示完整名称"],
+      ["Failed to get devices:", "获取芯片列表失败："],
+      ["Failed to get components:", "获取组件列表失败："],
+      ["Failed to get packs:", "获取支持包列表失败："],
+      ["Failed to get boards:", "获取开发板列表失败："],
+      ["Failed to get parts:", "获取部件列表失败："]
+    ],
+    "raw": [
+      [
+        "`Syncing online metadata information ${A}`",
+        "`正在同步在线元数据：${A}`"
+      ],
+      [
+        "`Syncing completed in ${(Date.now()-r)/1e3}s`",
+        "`同步完成，用时 ${(Date.now()-r)/1e3} 秒`"
+      ],
+      ["`Error during metadata sync: ${i}`", "`同步元数据失败：${i}`"],
+      ["`Installing [${A}] into ${r}`", "`正在安装 [${A}] 至 ${r}`"],
+      [
+        "`Installing [${A}] to ${(0,Ck.normalizePath)(e.destination)}`",
+        "`正在安装 [${A}] 至 ${(0,Ck.normalizePath)(e.destination)}`"
+      ],
+      [
+        "`Installation completed in ${(Date.now()-i)/1e3}s`",
+        "`安装完成，用时 ${(Date.now()-i)/1e3} 秒`"
+      ],
+      ["`Error during installation: ${n}`", "`安装失败：${n}`"],
+      ["`Removing [${A}] from ${i}`", "`正在从 ${i} 删除 [${A}]`"],
+      [
+        "`Removal completed in ${(Date.now()-n)/1e3}s`",
+        "`删除完成，用时 ${(Date.now()-n)/1e3} 秒`"
+      ],
+      [
+        "`Error during removing packs: ${(0,jV.getErrorMessage)(s)}`",
+        "`删除支持包失败：${(0,jV.getErrorMessage)(s)}`"
+      ],
+      ["`Search path does not exist: ${n}`", "`搜索路径不存在：${n}`"],
+      [
+        "`Detecting PDSCs in '${n}' and updating ${i}`",
+        "`正在 '${n}' 中搜索 PDSC 并更新 ${i}`"
+      ],
+      [
+        "`Detection completed in ${(Date.now()-s)/1e3}s`",
+        "`搜索完成，用时 ${(Date.now()-s)/1e3} 秒`"
+      ],
+      ["`Error during detecting PDSCs: ${g}`", "`搜索 PDSC 失败：${g}`"],
+      ["`${t} was already present`", "`${t} 已存在`"],
+      [
+        "`error: too many arguments${this.parent?` for '${this.name()}'`:\"\"}. Expected ${A} argument${r} but got ${e.length}.`",
+        "`错误：参数过多${this.parent?`，命令为 '${this.name()}'`:\"\"}。预期 ${A} 个，实际 ${e.length} 个。`"
+      ],
+      [
+        "`error: ${i(e)} cannot be used with ${i(A)}`",
+        "`错误：${i(e)} 不能与 ${i(A)} 同时使用`"
+      ]
+    ]
+  },
+  "project": {
+    "literals": [
+      ["Create an empty CMake project.", "创建空的 CMake 工程"],
+      [
+        "set the destination path for the generated project.",
+        "设置工程生成路径"
+      ],
+      ["set the name of the generated project.", "设置工程名称"],
+      ["set the target device.", "设置目标芯片"],
+      ["set the target board.", "设置目标开发板"],
+      [
+        "set the processor identifier (default: index 0).",
+        "设置处理器标识，默认为索引 0"
+      ],
+      ["set the security model.", "设置安全模式"],
+      ["set the toolchain", "设置工具链"],
+      [
+        "overwrite the destination project if it exists.",
+        "覆盖已存在的目标工程"
+      ],
+      ["enable verbose logging.", "启用详细日志"],
+      [
+        "keep the staging folder after project generation (for debugging purposes).",
+        "工程生成后保留暂存目录，供调试使用"
+      ],
+      [
+        "Either --target-device or --target-board must be specified, but not both.",
+        "需要指定 --target-device 或 --target-board，二者只能选择其一。"
+      ],
+      ["Command executed successfully.", "命令执行成功。"],
+      [
+        "The target project directory already exists. Consider using the overwrite option.",
+        "目标工程目录已存在，可使用 --overwrite 覆盖。"
+      ],
+      ["The source project could not be found.", "找不到源工程。"],
+      ["The source project is missing.", "缺少源工程。"],
+      ["The source project is invalid or corrupted.", "源工程无效或已损坏。"],
+      ["SW4STM32 projects are not supported yet.", "尚不支持 SW4STM32 工程。"],
+      ["DS-5 projects are not supported.", "不支持 DS-5 工程。"],
+      [
+        "STM32CubeIDE MPU projects are not supported yet.",
+        "尚不支持 STM32CubeIDE MPU 工程。"
+      ],
+      [
+        "STM32CubeIDE multi-context and multi-core projects are not supported yet.",
+        "尚不支持 STM32CubeIDE 多环境或多核工程。"
+      ],
+      [
+        "Generic Eclipse CDT projects are not supported.",
+        "不支持通用 Eclipse CDT 工程。"
+      ],
+      [
+        "Generic Eclipse projects are not supported.",
+        "不支持通用 Eclipse 工程。"
+      ],
+      [
+        "The project reader for the specified input type is not implemented.",
+        "尚不支持读取指定输入类型的工程。"
+      ],
+      [
+        "The specified source format is unknown (--source-format).",
+        "未知的源工程格式 --source-format。"
+      ],
+      ["The specified device is unknown.", "未知的目标芯片。"],
+      ["The specified processor is unknown.", "未知的处理器。"],
+      ["The specified board is unknown.", "未知的开发板。"],
+      [
+        "The specified JSON does not conform to the schema. Please fix the above errors.",
+        "指定 JSON 不符合结构定义，请修正上述错误。"
+      ],
+      [
+        "An error occurred while parsing the JSON project definition.",
+        "解析工程 JSON 定义失败。"
+      ],
+      [
+        "Multiple devices found across project configurations is not supported.",
+        "不支持各工程配置使用不同芯片。"
+      ],
+      [
+        "Multiple boards found across project configurations is not supported.",
+        "不支持各工程配置使用不同开发板。"
+      ],
+      [
+        "Multiple output names found across project configurations is not supported.",
+        "不支持各工程配置使用不同输出名称。"
+      ],
+      [
+        "Multiple toolchains found across project configurations is not supported.",
+        "不支持各工程配置使用不同工具链。"
+      ],
+      [
+        "Multiple processor names found across project configurations is not supported.",
+        "不支持各工程配置使用不同处理器。"
+      ],
+      [
+        "Inconsistent source files found across project configurations is not supported.",
+        "各工程配置的源文件不一致。"
+      ],
+      [
+        "Inconsistent build types found across project configurations is not supported.",
+        "各工程配置的构建类型不一致。"
+      ],
+      [
+        "The project writer for the specified output type is not implemented.",
+        "尚不支持生成指定输出类型的工程。"
+      ],
+      [
+        "The specified output project type is unknown (--format).",
+        "未知的工程输出类型 --format。"
+      ],
+      [
+        "The AC6 toolchain is not supported for the generated project.",
+        "生成的工程不支持 AC6 工具链。"
+      ],
+      ["The specified toolchain is not supported.", "不支持指定工具链。"],
+      ["Conflicting options were provided.", "指定的选项相互冲突。"],
+      [
+        "The STM32CubeIDE project converter bundle is not installed.",
+        "未安装 STM32CubeIDE 工程转换组件。"
+      ],
+      [
+        "An error occurred while invoking the STM32CubeIDE project converter bundle.",
+        "调用 STM32CubeIDE 工程转换组件失败。"
+      ],
+      [
+        "An error occurred during project generation, check the logs for more details.",
+        "生成工程失败，详细信息见日志。"
+      ],
+      [
+        "No JSON file nor JSON data provided. Please provide either sourceData or sourceJsonFile.",
+        "未提供 JSON 文件或数据，需要指定 sourceData 或 sourceJsonFile。"
+      ],
+      [
+        "The specified security model is not supported by the selected device.",
+        "目标芯片不支持指定的安全模式。"
+      ],
+      ["The specified security model is unknown.", "未知的安全模式。"],
+      [
+        "Multiple security models found across project configurations is not supported.",
+        "不支持各工程配置使用不同安全模式。"
+      ],
+      [
+        "The selected toolchain is not supported by the selected device.",
+        "目标芯片不支持所选工具链。"
+      ],
+      [
+        "A sub-project JSON file specified in the root JSON was not found.",
+        "找不到根 JSON 指定的子工程 JSON 文件。"
+      ],
+      [
+        "Toolchain file for {0} does not exist yet",
+        "工具链 {0} 的配置文件不存在"
+      ],
+      ["The specified '{0}' device is unknown", "未知芯片 '{0}'"],
+      ["The specified '{0}' board is unknown", "未知开发板 '{0}'"],
+      [
+        "The project directory {0} already exists. Consider using the overwrite option.",
+        "工程目录 {0} 已存在，可使用 --overwrite 覆盖。"
+      ],
+      [
+        "One or more pre-build or post-build commands are detected. These commands have been added as comments in the generated cmake/vscode_generated.cmake file as they require manual refinement to work correctly.",
+        "检测到构建前或构建后的命令。这些命令已作为注释保存在 cmake/vscode_generated.cmake 中，需要调整后使用。"
+      ],
+      [
+        "{0} does not conform to the schema. Please fix the above errors.",
+        "{0} 不符合结构定义，请修正上述错误。"
+      ],
+      ["Project JSON file not found: {0}", "找不到工程 JSON 文件：{0}"],
+      [
+        "{0} does not conform to the root schema. Please fix the above errors.",
+        "{0} 不符合根结构定义，请修正上述错误。"
+      ],
+      [
+        "No security model specified, but TrustZone-related compiler flags were found (-mcmse, -msecure). cd ..Assuming TrustZone is enabled.",
+        "未指定安全模式，但检测到 TrustZone 编译选项 -mcmse 或 -msecure，按已启用 TrustZone 处理。"
+      ],
+      ["Unknown security model: {0}", "未知的安全模式：{0}"],
+      [
+        "The selected {0} toolchain is not supported by the selected {1} device.",
+        "目标芯片 {1} 不支持工具链 {0}。"
+      ],
+      [
+        "STM32CubeMX2 project reader not implemented",
+        "尚不支持读取 STM32CubeMX2 工程"
+      ],
+      ["Unknown source format: {0}", "未知的源格式：{0}"],
+      ["Makefile writer not implemented", "尚不支持生成 Makefile"],
+      ["Unsupported output format: {0}", "不支持的输出格式：{0}"],
+      ["cannot retrieve component", "无法获取组件"],
+      [
+        "cannot retrieve any component matching conditions",
+        "找不到符合条件的组件"
+      ],
+      ["No {0} toolchain installed", "未安装 {0} 工具链"],
+      [
+        "No toolchain description found for latest {0} toolchain",
+        "找不到最新版 {0} 工具链的描述组件"
+      ],
+      [
+        "Latest toolchain description is invalid: {0}",
+        "最新版工具链的描述无效：{0}"
+      ],
+      ["Cannot resolve project dependencies", "无法解析工程依赖"],
+      ["Generating source files", "正在生成源文件"],
+      ["Generating header files", "正在生成头文件"],
+      ["Generating linker script", "正在生成链接脚本"],
+      ["Copying pack files", "正在复制支持包文件"],
+      ["No destination path selected.", "未指定目标路径。"],
+      ["Destination path does not exist: {0}", "目标路径不存在：{0}"],
+      ["Cannot retrieve device", "无法获取芯片信息"],
+      ["Cannot retrieve toolchain", "无法获取工具链"],
+      [
+        "Cannot retrieve processor {0} on device {1}, processor(s) details: {2}",
+        "无法获取芯片 {1} 的处理器 {0}，处理器详情：{2}"
+      ],
+      ["with Pname {0}", "Pname 为 {0}"],
+      [
+        "Retrieving toolchain and related CMake config file",
+        "正在获取工具链及其 CMake 配置"
+      ],
+      ["Cannot find CMake file in: {0}", "找不到 CMake 文件：{0}"],
+      ["Resolving required packs...", "正在解析所需支持包……"],
+      ["Installing pack {0} if needed...", "正在检查并安装支持包 {0}……"],
+      ["Failed to install pack {0}", "安装支持包 {0} 失败"],
+      [
+        "Retrieving component and pack dependencies",
+        "正在获取组件与支持包依赖"
+      ],
+      ["Retrieving files to copy", "正在获取需要复制的文件"],
+      ["Building skeleton template", "正在生成工程模板"],
+      ["Unsupported toolchain: {0}", "不支持的工具链：{0}"]
+    ],
+    "raw": [
+      ["`Using ${name}@${version}`", "`正在使用 ${name}@${version}`"],
+      [
+        "`No device found for board ${options2.targetBoard}.`",
+        "`未找到开发板 ${options2.targetBoard} 对应的芯片。`"
+      ],
+      [
+        "`Device ${options2.targetDevice} not found.`",
+        "`未找到芯片 ${options2.targetDevice}。`"
+      ],
+      [
+        "`Invalid security model: ${options2.securityModel}. Valid options are: ${validSecurityModels.map((model) => model.name).join(\", \")}.`",
+        "`安全模式无效：${options2.securityModel}。可选值：${validSecurityModels.map((model) => model.name).join(\", \")}。`"
+      ],
+      [
+        "`The specified target device ${device.Dname} does not support ${options2.securityModel ?? \"the specified\"} security model.`",
+        "`目标芯片 ${device.Dname} 不支持所选安全模式 ${options2.securityModel ?? \"\"}。`"
+      ],
+      [
+        "`Invalid toolchain: ${options2.toolchain}. Valid options are: ${validToolchains.join(\", \")}.`",
+        "`工具链无效：${options2.toolchain}。可选值：${validToolchains.join(\", \")}。`"
+      ],
+      [
+        "`error: ${getErrorMessage(option)} cannot be used with ${getErrorMessage(conflictingOption)}`",
+        "`错误：${getErrorMessage(option)} 不能与 ${getErrorMessage(conflictingOption)} 同时使用`"
+      ],
+      [
+        "`error: too many arguments${forSubcommand}. Expected ${expected} argument${s} but got ${received}: ${details}.`",
+        "`错误：参数过多${forSubcommand}。预期 ${expected} 个，实际 ${received} 个：${details}。`"
+      ],
+      ["` for '${this.name()}'`", "`，命令为 '${this.name()}'`"]
+    ]
+  }
+}
